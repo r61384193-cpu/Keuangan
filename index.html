@@ -3,42 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manajemen Keuangan Pribadi</title>
+    <title>Catatan Keuangan Pribadi</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <h1>💰 Catatan Keuangan</h1>
+        <header class="app-header">
+            <h1><i class="fas fa-wallet"></i> Catatan Keuangan</h1>
+            <p class="subtitle">Kelola keuanganmu dengan mudah</p>
+        </header>
 
-        <!-- Kotak Saldo -->
-        <div class="saldo-box">
-            <h2>Saldo Saat Ini</h2>
-            <p id="saldo">Rp 0</p>
+        <!-- Kotak Saldo Utama -->
+        <div class="saldo-card">
+            <p class="saldo-label">Saldo Saat Ini</p>
+            <h2 id="saldo">Rp 0</h2>
+            <div class="saldo-stats">
+                <div class="stat masuk">
+                    <i class="fas fa-arrow-down"></i>
+                    <span>Pemasukan</span>
+                    <strong id="totalMasuk">Rp 0</strong>
+                </div>
+                <div class="stat keluar">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>Pengeluaran</span>
+                    <strong id="totalKeluar">Rp 0</strong>
+                </div>
+            </div>
         </div>
 
         <!-- Form Input -->
-        <div class="form-box">
-            <h3>Tambah Transaksi</h3>
+        <div class="card form-card">
+            <h3><i class="fas fa-plus-circle"></i> Tambah Transaksi</h3>
             <form id="formTransaksi">
-                <select id="jenis" required>
-                    <option value="pemasukan">Pemasukan</option>
-                    <option value="pengeluaran">Pengeluaran</option>
-                </select>
-
-                <input type="number" id="jumlah" placeholder="Jumlah (Rp)" min="1" required>
-                <input type="text" id="keterangan" placeholder="Keterangan" required>
-
-                <button type="submit">Simpan Transaksi</button>
+                <div class="form-row">
+                    <select id="jenis" required>
+                        <option value="pemasukan">Pemasukan</option>
+                        <option value="pengeluaran">Pengeluaran</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <input type="number" id="jumlah" placeholder="Jumlah (Rp)" min="1" required>
+                </div>
+                <div class="form-row">
+                    <input type="text" id="keterangan" placeholder="Keterangan (contoh: Gaji, Belanja)" required>
+                </div>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-save"></i> Simpan Transaksi
+                </button>
             </form>
         </div>
 
-        <!-- Daftar Transaksi -->
-        <div class="laporan-box">
-            <h3>Riwayat Transaksi</h3>
+        <!-- Riwayat Transaksi -->
+        <div class="card history-card">
+            <div class="card-header">
+                <h3><i class="fas fa-history"></i> Riwayat Transaksi</h3>
+                <button id="hapusSemua" class="btn-icon danger" title="Hapus Semua">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </div>
             <ul id="daftarTransaksi">
-                <li class="kosong">Belum ada transaksi.</li>
+                <li class="empty-state">
+                    <i class="fas fa-receipt"></i>
+                    <p>Belum ada transaksi.<br>Mulai catat keuanganmu sekarang!</p>
+                </li>
             </ul>
-            <button id="hapusSemua" class="btn-hapus">Hapus Semua Data</button>
         </div>
     </div>
 
