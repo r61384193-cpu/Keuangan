@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Keuangan Pribadi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💰 Catatan Keuangan</h1>
+
+        <!-- Kotak Saldo -->
+        <div class="saldo-box">
+            <h2>Saldo Saat Ini</h2>
+            <p id="saldo">Rp 0</p>
+        </div>
+
+        <!-- Form Input -->
+        <div class="form-box">
+            <h3>Tambah Transaksi</h3>
+            <form id="formTransaksi">
+                <select id="jenis" required>
+                    <option value="pemasukan">Pemasukan</option>
+                    <option value="pengeluaran">Pengeluaran</option>
+                </select>
+
+                <input type="number" id="jumlah" placeholder="Jumlah (Rp)" min="1" required>
+                <input type="text" id="keterangan" placeholder="Keterangan" required>
+
+                <button type="submit">Simpan Transaksi</button>
+            </form>
+        </div>
+
+        <!-- Daftar Transaksi -->
+        <div class="laporan-box">
+            <h3>Riwayat Transaksi</h3>
+            <ul id="daftarTransaksi">
+                <li class="kosong">Belum ada transaksi.</li>
+            </ul>
+            <button id="hapusSemua" class="btn-hapus">Hapus Semua Data</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
