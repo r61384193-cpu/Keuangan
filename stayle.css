@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #2d3748;
+    margin-bottom: 25px;
+}
+
+.saldo-box {
+    background: linear-gradient(135deg, #2b6cb0, #3182ce);
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.saldo-box h2 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.saldo-box p {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.form-box, .laporan-box {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+h3 {
+    color: #2d3748;
+    margin-bottom: 15px;
+}
+
+form select, form input, form button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+form button {
+    background-color: #38a169;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background-color: #2f855a;
+}
+
+.laporan-box ul {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.laporan-box li {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pemasukan {
+    background-color: #f0fff4;
+    border-left: 4px solid #38a169;
+}
+
+.pengeluaran {
+    background-color: #fff5f5;
+    border-left: 4px solid #e53e3e;
+}
+
+.kosong {
+    text-align: center;
+    color: #718096;
+    font-style: italic;
+}
+
+.btn-hapus {
+    width: 100%;
+    padding: 10px;
+    background-color: #e53e3e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-hapus:hover {
+    background-color: #c53030;
+}
+
+.hapus-item {
+    background: transparent;
+    border: none;
+    color: #e53e3e;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0 8px;
+}
